@@ -1,5 +1,5 @@
-# Matriz con datos de clientes
-clientes = [
+# Matrix with customer data
+clients = [
     ["C001", 250, 10],
     ["C002", 45, 2],
     ["C003", 120, 5],
@@ -7,34 +7,34 @@ clientes = [
     ["C005", 50, 6]
 ]
 
-# Función para clasificar compromiso
-def clasificar_compromiso(duracion, clics):
+# Function to classify commitment
+def classify_engagement(duration, clicks):
 
-    if duracion > 180 and clics > 8:
-        return "Alto"
+    if duration > 180 and clicks > 8:
+        return "High"
 
-    elif duracion < 60 or clics < 3:
-        return "Bajo"
+    elif duration < 60 or clicks < 3:
+        return "Low"
 
     else:
-        return "Medio"
+        return "Medium"
 
 
-# Mostrar informe
-print("INFORME DE CLASIFICACIÓN")
+# Show report
+print("CLASSIFICATION REPORT")
 print("----------------------------")
 
-for cliente in clientes:
+for client in clients:
 
-    id_cliente = cliente[0]
-    duracion = cliente[1]
-    clics = cliente[2]
+    client_id = client[0]
+    duration = client[1]
+    clicks = client[2]
 
-    clasificacion = clasificar_compromiso(
-        duracion,
-        clics
+    classification = classify_engagement(
+        duration,
+        clicks
     )
 
-    print("Cliente:", id_cliente)
-    print("Clasificación:", clasificacion)
+    print("Customer:", client_id)
+    print("Classification:", classification)
     print("----------------------------")
